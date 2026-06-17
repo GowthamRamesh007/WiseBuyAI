@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WiseBuy AI - Premium AI-Powered Product Intelligence</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Stop guessing, start comparing. WiseBuy AI uses cognitive intelligence to scrape, analyze, and recommend the best electronics across the internet.">
+  <meta name="keywords" content="product comparison, AI product adviser, electronics specifications, laptop comparison, smartphone comparison, best tech value">
+  <meta name="author" content="WiseBuy AI Corp">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%236366f1%22/><circle cx=%2250%22 cy=%2250%22 r=%2225%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%228%22/></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 1. HEADER & NAVBAR -->
+  <header>
+    <div class="container">
+      <a href="#home" class="logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 20h20M5 17V7a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v10" />
+            <path d="M9 17v-4M15 17V9" />
+          </svg>
+        </div>
+        WiseBuy AI
+      </a>
+      
+      <nav id="navbar-menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#compare">Compare Matrix</a>
+        <a href="#ai">AI Assistant</a>
+        <a href="#about">About Engine</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      
+      <div class="nav-cta">
+        <a href="#ai" class="btn btn-primary btn-sm">Try Finder</a>
+      </div>
+      
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CORE VIEWS -->
+  <main>
+    
+    <!-- ========================================== -->
+    <!-- 2. HOME VIEW                               -->
+    <!-- ========================================== -->
+    <section id="home-view" class="view-section active">
+      <div class="container">
+        
+        <!-- Hero Section -->
+        <div class="hero">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span></span> Synthesizing 10k+ sources in real-time
+            </div>
+            <h1>Stop Guessing.<br><span class="text-gradient">Start Comparing.</span></h1>
+            <p class="hero-desc">
+              AI analyzes products across the internet and recommends the best option for your needs. Scrapes specifications, aggregate sentiments, and pricing records.
+            </p>
+            
+            <!-- Hero Search Input -->
+            <div class="hero-search-wrapper">
+              <input type="text" id="hero-search" class="hero-search-bar" placeholder="Search a product (e.g. 'MacBook', 'iPhone', 'Sony')..." autocomplete="off">
+              <button class="btn btn-primary btn-search-trigger" onclick="window.location.hash='#compare'">Compare</button>
+              <div id="hero-suggestions" class="hero-search-suggestions"></div>
+            </div>
+            
+            <div class="hero-actions-row">
+              <span>Popular comparisons:</span>
+              <a href="#compare" class="comparison-shortcut" onclick="window.location.hash='#compare'">MacBook vs XPS</a>
+              <span>•</span>
+              <a href="#compare" onclick="window.location.hash='#compare'">iPhone vs Galaxy S24</a>
+            </div>
+          </div>
+          
+          <!-- Floating Mockups Visual Column -->
+          <div class="hero-visual">
+            <div class="glow-orb"></div>
+            
+            <!-- Card 1: Laptop -->
+            <div class="floating-hero-card glass-card floating">
+              <div class="svg-container">
+                <svg viewBox="0 0 160 80" width="100%">
+                  <!-- Laptop Graphic minimal -->
+                  <rect x="35" y="10" width="90" height="50" rx="4" fill="#09090b" stroke="rgba(255,255,255,0.12)" />
+                  <rect x="38" y="13" width="84" height="42" rx="2" fill="var(--primary-glow)" />
+                  <path d="M 25 60 L 135 60 L 130 67 L 30 67 Z" fill="#27272a" />
+                </svg>
+              </div>
+              <h4>MacBook Pro M3</h4>
+              <div class="fcard-meta">
+                <span class="price">₹1,69,900</span>
+                <span class="rating">★ 4.8</span>
+              </div>
+            </div>
+            
+            <!-- Card 2: Phone -->
+            <div class="floating-hero-card glass-card floating-delayed-1 fcard-2">
+              <div class="svg-container">
+                <svg viewBox="0 0 160 80" width="100%">
+                  <!-- Phone Graphic minimal -->
+                  <rect x="65" y="5" width="30" height="60" rx="5" fill="#09090b" stroke="rgba(255,255,255,0.12)" />
+                  <rect x="67" y="7" width="26" height="56" rx="3" fill="var(--secondary-glow)" />
+                  <circle cx="80" cy="9" r="1" fill="#fff" opacity="0.4" />
+                </svg>
+              </div>
+              <h4>iPhone 15 Pro Max</h4>
+              <div class="fcard-meta">
+                <span class="price">₹1,44,900</span>
+                <span class="rating">★ 4.8</span>
+              </div>
+            </div>
+            
+            <!-- Card 3: Headphones -->
+            <div class="floating-hero-card glass-card floating-delayed-2 fcard-3">
+              <div class="svg-container">
+                <svg viewBox="0 0 160 80" width="100%">
+                  <!-- Headphones minimal -->
+                  <path d="M 50 45 A 25 25 0 0 1 110 45" fill="none" stroke="#52525b" stroke-width="3" />
+                  <rect x="42" y="38" width="12" height="18" rx="4" fill="#27272a" />
+                  <rect x="106" y="38" width="12" height="18" rx="4" fill="#27272a" />
+                </svg>
+              </div>
+              <h4>Sony XM5</h4>
+              <div class="fcard-meta">
+                <span class="price">₹29,990</span>
+                <span class="rating">★ 4.7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Statistics Section -->
+        <div class="statistics">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-num text-gradient">1.2M+</div>
+              <div class="stat-label">Products Analyzed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num text-gradient">50+</div>
+              <div class="stat-label">Retail Sources Scraped</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num text-gradient">99.4%</div>
+              <div class="stat-label">AI Decision Accuracy</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num text-gradient">0.2s</div>
+              <div class="stat-label">Search Latency</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Browse Categories Grid -->
+        <div class="home-categories">
+          <div class="section-header">
+            <h2>Compare By Category</h2>
+            <p>Select a hardware category to browse direct specs, prices, and curated ratings charts.</p>
+          </div>
+          
+          <div class="category-grid">
+            <!-- Laptops -->
+            <div class="category-card glass-card" onclick="window.location.hash='#compare'">
+              <div class="category-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="2" y1="20" x2="22" y2="20" />
+                  <line x1="12" y1="17" x2="12" y2="20" />
+                </svg>
+              </div>
+              <h3>Laptops</h3>
+              <p>MacBook, XPS, ThinkPad & more</p>
+            </div>
+            
+            <!-- Smartphones -->
+            <div class="category-card glass-card" onclick="window.location.hash='#compare'">
+              <div class="category-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                  <line x1="12" y1="18" x2="12.01" y2="18" />
+                </svg>
+              </div>
+              <h3>Smartphones</h3>
+              <p>iOS and Flagship Android devices</p>
+            </div>
+            
+            <!-- Headphones -->
+            <div class="category-card glass-card" onclick="window.location.hash='#compare'">
+              <div class="category-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                </svg>
+              </div>
+              <h3>Audio & Headphones</h3>
+              <p>ANC Over-Ears and Premium Buds</p>
+            </div>
+            
+            <!-- Smartwatches -->
+            <div class="category-card glass-card" onclick="window.location.hash='#compare'">
+              <div class="category-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="7" />
+                  <polyline points="12 9 12 12 13.5 13.5" />
+                  <path d="M16.51 5.49 L18 2 L6 2 L7.49 5.49" />
+                  <path d="M7.49 18.51 L6 22 L18 22 L16.51 18.51" />
+                </svg>
+              </div>
+              <h3>Smartwatches</h3>
+              <p>Fitness trackers & Connected wearables</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Curated Popular Comparisons -->
+        <div class="featured-comparisons">
+          <div class="section-header">
+            <h2>Featured Showdowns</h2>
+            <p>Review the hot, highly-searched comparisons analyzed by our community users.</p>
+          </div>
+          
+          <div class="comparisons-grid">
+            
+            <!-- Laptop battle -->
+            <div class="comparison-card glass-card">
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--primary); margin-bottom: 12px;">Premium Ultrabooks</div>
+              <div class="vs-box">
+                <div class="vs-item">
+                  <div style="font-size:18px; font-weight:700;">Apple</div>
+                  <h4>MacBook Pro 14"</h4>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="vs-item">
+                  <div style="font-size:18px; font-weight:700;">Dell</div>
+                  <h4>XPS 14</h4>
+                </div>
+              </div>
+              <div style="font-size:13px; color:var(--text-secondary); margin-bottom:20px; line-height: 1.5;">
+                MacBook dominates battery life, but XPS offers the sleekest bezel-less design and haptic glass deck.
+              </div>
+              <a href="#" class="btn btn-secondary btn-sm" style="width: 100%;" data-compare="macbook-pro-14,dell-xps-14">Load Comparison</a>
+            </div>
+            
+            <!-- Phone Battle -->
+            <div class="comparison-card glass-card">
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--secondary); margin-bottom: 12px;">Mobile Flagships</div>
+              <div class="vs-box">
+                <div class="vs-item">
+                  <div style="font-size:18px; font-weight:700;">Apple</div>
+                  <h4>iPhone 15 Pro Max</h4>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="vs-item">
+                  <div style="font-size:18px; font-weight:700;">Samsung</div>
+                  <h4>Galaxy S24 Ultra</h4>
+                </div>
+              </div>
+              <div style="font-size:13px; color:var(--text-secondary); margin-bottom:20px; line-height: 1.5;">
+                Samsung features the S-Pen and outdoor glare reductions, while iOS delivers peak processor efficiency.
+              </div>
+              <a href="#" class="btn btn-secondary btn-sm" style="width: 100%;" data-compare="iphone-15-pro-max,galaxy-s24-ultra">Load Comparison</a>
+            </div>
+            
+            <!-- Headphone Battle -->
+            <div class="comparison-card glass-card">
+              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 12px;">Over-Ear Audio</div>
+              <div class="vs-box">
+                <div class="vs-item">
+                  <div style="font-size:18px; font-weight:700;">Sony</div>
+                  <h4>WH-1000XM5</h4>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="vs-item">
+                  <div style="font-size:18px; font-weight:700;">Bose</div>
+                  <h4>QC Ultra</h4>
+                </div>
+              </div>
+              <div style="font-size:13px; color:var(--text-secondary); margin-bottom:20px; line-height: 1.5;">
+                Sony wins in noise cancellation configuration, while Bose leads in wear comfort and flat travel folding.
+              </div>
+              <a href="#" class="btn btn-secondary btn-sm" style="width: 100%;" data-compare="sony-wh1000xm5,bose-qc-ultra">Load Comparison</a>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. PRODUCT COMPARISON VIEW                 -->
+    <!-- ========================================== -->
+    <section id="compare-view" class="view-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <h2>Product Comparison Matrix</h2>
+          <p>Search and add up to three products side by side to review technical breakdowns, pricing spreads, and custom AI summaries.</p>
+        </div>
+        
+        <div class="compare-interface">
+          
+          <!-- Search slots input cards -->
+          <div class="compare-search-row">
+            
+            <!-- Slot A -->
+            <div class="compare-search-box glass-card">
+              <label>Product A</label>
+              <div class="compare-search-input-wrapper">
+                <input type="text" id="search-slot-a" placeholder="Search first item..." autocomplete="off">
+                <span class="search-icon">🔍</span>
+                <div id="suggest-slot-a" class="compare-search-suggestions"></div>
+              </div>
+              <div class="compare-selection-card" id="selected-card-slot-a" style="display: none;"></div>
+            </div>
+            
+            <!-- Slot B -->
+            <div class="compare-search-box glass-card">
+              <label>Product B</label>
+              <div class="compare-search-input-wrapper">
+                <input type="text" id="search-slot-b" placeholder="Search second item..." autocomplete="off">
+                <span class="search-icon">🔍</span>
+                <div id="suggest-slot-b" class="compare-search-suggestions"></div>
+              </div>
+              <div class="compare-selection-card" id="selected-card-slot-b" style="display: none;"></div>
+            </div>
+            
+            <!-- Slot C -->
+            <div class="compare-search-box glass-card">
+              <label>Product C</label>
+              <div class="compare-search-input-wrapper">
+                <input type="text" id="search-slot-c" placeholder="Search third item..." autocomplete="off">
+                <span class="search-icon">🔍</span>
+                <div id="suggest-slot-c" class="compare-search-suggestions"></div>
+              </div>
+              <div class="compare-selection-card" id="selected-card-slot-c" style="display: none;"></div>
+            </div>
+            
+          </div>
+          
+          <!-- Contrast controls -->
+          <div class="compare-controls" style="display: none;">
+            <label class="compare-toggle-label">
+              <input type="checkbox" id="highlight-diffs-toggle" class="compare-toggle-input">
+              <span class="compare-toggle-switch"></span>
+              Highlight Specification Differences
+            </label>
+            <span style="font-size: 12px; color: var(--text-muted);">Real-time scrapers active</span>
+          </div>
+          
+          <!-- Spec matrix Table Container -->
+          <div class="matrix-container glass-card" id="matrix-table-container">
+            <!-- Table injected via app.js -->
+          </div>
+          
+          <!-- AI Summary block -->
+          <div class="compare-ai-summary-card glass-card">
+            <div class="ai-summary-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+              <h3>WiseBuy AI Decision Summary</h3>
+            </div>
+            <div class="ai-summary-body" id="ai-summary-text">
+              Select products to generate an AI-powered comparison summary.
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. AI RECOMMENDATION VIEW                  -->
+    <!-- ========================================== -->
+    <section id="ai-view" class="view-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <h2>AI Recommendation Dashboard</h2>
+          <p>Let cognitive algorithms calculate values, rank best performers, and answer queries regarding our electronics database.</p>
+        </div>
+        
+        <div class="ai-dashboard-layout">
+          
+          <!-- Finder widget "Find The Best Product For Me" -->
+          <div class="finder-card glass-card">
+            <div class="ai-summary-header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <h3>Find The Best Product For Me</h3>
+            </div>
+            <p style="font-size: 14px; color: var(--text-secondary); margin-top: 4px;">Adjust parameters below and let our recommendation engine find the optimal fit.</p>
+            
+            <div class="finder-form-grid">
+              
+              <!-- Budget -->
+              <div class="finder-field">
+                <label for="finder-budget-slider">Max Budget</label>
+                <input type="range" id="finder-budget-slider" min="10000" max="250000" step="5000" value="100000">
+                <div class="finder-budget-val" id="finder-budget-val">₹1,00,000</div>
+              </div>
+              
+              <!-- Usage Type -->
+              <div class="finder-field">
+                <label for="finder-usage">Usage Profile</label>
+                <select id="finder-usage">
+                  <option value="General Shopper">General Shopper</option>
+                  <option value="Student">Student</option>
+                  <option value="Professional">Professional</option>
+                  <option value="Tech Enthusiast">Tech Enthusiast</option>
+                  <option value="Gamer">Gamer</option>
+                </select>
+              </div>
+              
+              <!-- Preferred Brand -->
+              <div class="finder-field">
+                <label for="finder-brand">Preferred Brand</label>
+                <select id="finder-brand">
+                  <option value="any">Any Brand</option>
+                  <option value="Apple">Apple</option>
+                  <option value="Samsung">Samsung</option>
+                  <option value="Dell">Dell</option>
+                  <option value="Lenovo">Lenovo</option>
+                  <option value="Sony">Sony</option>
+                  <option value="Google">Google</option>
+                  <option value="Bose">Bose</option>
+                  <option value="Garmin">Garmin</option>
+                </select>
+              </div>
+              
+              <!-- Priority -->
+              <div class="finder-field">
+                <label for="finder-priority">Core Priority</label>
+                <select id="finder-priority">
+                  <option value="Performance">Raw Performance</option>
+                  <option value="Battery">Battery Endurance</option>
+                  <option value="Camera">Camera Capability</option>
+                  <option value="Office Work">Office Productivity</option>
+                  <option value="Gaming">Gaming / Graphics</option>
+                  <option value="Design">Material Design</option>
+                </select>
+              </div>
+              
+            </div>
+            
+            <button class="btn btn-primary" id="btn-submit-finder" style="width: 100%; height: 50px; font-size:16px;">Calculate Recommendation</button>
+            
+            <!-- Result Output -->
+            <div class="finder-result-container" id="finder-result-wrap">
+              <div class="finder-result-card glass-card">
+                <div class="finder-result-visual">
+                  <div class="svg-box" id="finder-result-visual"></div>
+                  <div class="finder-match-badge" id="finder-result-confidence">Match Score: 95%</div>
+                </div>
+                <div class="finder-result-info">
+                  <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--secondary); margin-bottom:4px;">Optimal Selection</div>
+                  <h3 id="finder-result-title">MacBook Pro</h3>
+                  
+                  <div class="finder-explanation" id="finder-result-explanation">
+                    Explanation text...
+                  </div>
+                  
+                  <div class="finder-pros-cons">
+                    <div>
+                      <div class="finder-list-header">Key Strengths</div>
+                      <ul class="matrix-pro-list" id="finder-result-pros" style="font-size:13px;"></ul>
+                    </div>
+                    <div>
+                      <div class="finder-list-header">Compromises</div>
+                      <ul class="matrix-con-list" id="finder-result-cons" style="font-size:13px;"></ul>
+                    </div>
+                  </div>
+                  
+                  <button class="btn btn-secondary btn-sm" id="btn-finder-add-compare" style="margin-top: 24px; width: 100%;">Add to Comparison Matrix</button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Six classified cards section -->
+          <div class="recommendation-dashboard-section">
+            <h2>Automated AI Ranks</h2>
+            <p class="dashboard-desc">Curated ranking lists calculated directly from specs, user rating ratios, and pricing spreadsheets.</p>
+            
+            <div class="dashboard-grid" id="recommendation-dashboard-grid">
+              <!-- Cards dynamically rendered via app.js -->
+            </div>
+          </div>
+          
+          <!-- Visual dashboard charts -->
+          <div class="dashboard-charts-section">
+            
+            <div class="chart-card glass-card">
+              <h3>Pricing Index Distribution</h3>
+              <div class="chart-container" id="price-chart-bars">
+                <!-- Bar columns generated via app.js -->
+              </div>
+              <p style="font-size:12px; color:var(--text-muted); margin-top:12px; text-align:center;">Relative price distribution index across catalog products</p>
+            </div>
+            
+            <div class="chart-card glass-card">
+              <h3>Verified Rating Sentiments</h3>
+              <div class="sentiment-chart-list" id="sentiment-chart-list">
+                <!-- Horizontal bar items generated via app.js -->
+              </div>
+              <p style="font-size:12px; color:var(--text-muted); margin-top:12px; text-align:center;">Score ratings compiled across verified customer reviews</p>
+            </div>
+            
+          </div>
+          
+          <!-- Interactive Chat Assistant -->
+          <div class="ai-chat-assistant-container">
+            <div class="section-header">
+              <h2>Ask WiseBuy AI Chat Assistant</h2>
+              <p>Ask direct questions about specs, compare specific models, or filter categories via our conversational interface.</p>
+            </div>
+            
+            <div class="chat-card glass-card">
+              <!-- Header -->
+              <div class="chat-header">
+                <div class="chat-title-info">
+                  <div class="chat-avatar-pulse"></div>
+                  <div>
+                    <h4 style="font-size:15px; color:#fff;">AI Hardware Assistant</h4>
+                    <p style="font-size:11px; color:var(--text-secondary); margin-bottom:0;">Online • Scraped 47 records</p>
+                  </div>
+                </div>
+                <span style="font-size: 11px; color: var(--text-muted); font-weight:600; text-transform:uppercase;">CogEngine v3.2</span>
+              </div>
+              
+              <!-- Chat suggestions chips -->
+              <div class="chat-suggest-row">
+                <div class="chat-suggest-chip">Compare iPhone 15 Pro and Galaxy S24 Ultra</div>
+                <div class="chat-suggest-chip">What is the best laptop under ₹1,50,000?</div>
+                <div class="chat-suggest-chip">Which headphones have the longest battery?</div>
+                <div class="chat-suggest-chip">Explain Sony WH-1000XM5 pros and cons</div>
+              </div>
+              
+              <!-- Message Area -->
+              <div class="chat-messages-box" id="chat-messages">
+                <!-- Messages rendered via app.js -->
+              </div>
+              
+              <!-- Input -->
+              <div class="chat-input-row">
+                <input type="text" id="chat-input" class="chat-input-field" placeholder="Compare items or ask spec queries (e.g. 'Garmin Venu 3 vs Galaxy Watch 6')...">
+                <button class="btn btn-primary btn-send-chat" id="btn-send-chat" aria-label="Send message">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. ABOUT ENGINE VIEW                       -->
+    <!-- ========================================== -->
+    <section id="about-view" class="view-section">
+      <div class="container">
+        
+        <div class="about-layout">
+          
+          <div class="about-hero">
+            <h1>The Intelligence Engine</h1>
+            <p>WiseBuy AI was founded to remove the cognitive overhead of research shopping. By utilizing background automated scraping trackers and sentiment scoring parser tools, we organize internet catalog records into actionable insights.</p>
+          </div>
+          
+          <!-- How it works animated timeline -->
+          <div class="timeline-section">
+            <div class="timeline-line"></div>
+            
+            <!-- Step 1 -->
+            <div class="timeline-step">
+              <div class="timeline-node"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-step-num">Step 01</div>
+                <h3>Collect Data</h3>
+                <p>WiseBuy AI continuously crawls manufacturer specs and major retail lists (Amazon, Croma, Reliance Digital) to maintain absolute pricing accuracy.</p>
+              </div>
+              <div class="timeline-visual">
+                <div class="timeline-visual-box glass-card">
+                  <div style="font-size:11px; color:var(--primary); font-weight:600; text-transform:uppercase; margin-bottom:8px;">Indexing...</div>
+                  <div style="font-family:monospace; font-size:10px; color:var(--text-muted); line-height:1.2;">
+                    GET /api/scrapers/v3/amazon<br>
+                    HTTP/1.1 200 OK<br>
+                    Parsing item data: SUCCESS
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="timeline-step">
+              <div class="timeline-node"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-step-num">Step 02</div>
+                <h3>Analyze Specifications</h3>
+                <p>We normalize complex product listings, battery parameters, and weights into an aligned catalog schema, removing branding exaggerations.</p>
+              </div>
+              <div class="timeline-visual">
+                <div class="timeline-visual-box glass-card">
+                  <div style="font-size:11px; color:var(--secondary); font-weight:600; text-transform:uppercase; margin-bottom:8px;">Structuring...</div>
+                  <div style="font-family:monospace; font-size:10px; color:var(--text-muted); line-height:1.2;">
+                    Spec normalized:<br>
+                    • Weight: 3.5 lbs (1.61 kg)<br>
+                    • Battery: 72.4 Wh (18h)
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="timeline-step">
+              <div class="timeline-node"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-step-num">Step 03</div>
+                <h3>Compare Competing Products</h3>
+                <p>Products are aligned side by side, running custom scripts to cross-reference prices and spot key differences in features.</p>
+              </div>
+              <div class="timeline-visual">
+                <div class="timeline-visual-box glass-card">
+                  <div style="font-size:11px; color:var(--accent); font-weight:600; text-transform:uppercase; margin-bottom:8px;">Aligning...</div>
+                  <div style="font-family:monospace; font-size:10px; color:var(--text-muted); line-height:1.2;">
+                    Diff search complete:<br>
+                    • Price Delta: ₹10,000<br>
+                    • Screen Delta: 120Hz vs 60Hz
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="timeline-step">
+              <div class="timeline-node"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-step-num">Step 04</div>
+                <h3>Generate AI Insights</h3>
+                <p>Natural language processing models summarize lists, filter out review bots, and synthesize pros and cons from customer feedback.</p>
+              </div>
+              <div class="timeline-visual">
+                <div class="timeline-visual-box glass-card">
+                  <div style="font-size:11px; color:var(--success); font-weight:600; text-transform:uppercase; margin-bottom:8px;">Synthesizing...</div>
+                  <div style="font-family:monospace; font-size:10px; color:var(--text-muted); line-height:1.2;">
+                    AI Sentiment Parse:<br>
+                    • Positive: 92.4% (battery)<br>
+                    • Negative: 7.6% (weight)
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="timeline-step">
+              <div class="timeline-node"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-step-num">Step 05</div>
+                <h3>Recommend Best Fit</h3>
+                <p>The recommendation matrices present the exact matches based on budget parameters, priorities, and usage profiles.</p>
+              </div>
+              <div class="timeline-visual">
+                <div class="timeline-visual-box glass-card">
+                  <div style="font-size:11px; color:var(--warning); font-weight:600; text-transform:uppercase; margin-bottom:8px;">Match Found</div>
+                  <div style="font-family:monospace; font-size:10px; color:var(--text-muted); line-height:1.2;">
+                    Recommendation: ACTIVE<br>
+                    Match Confidence: 98.2%
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. CONTACT VIEW                            -->
+    <!-- ========================================== -->
+    <section id="contact-view" class="view-section">
+      <div class="container">
+        
+        <div class="contact-layout">
+          
+          <!-- Details info -->
+          <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>Have questions about our API integrations, licensing our product data index, or general user feedback? Submit a ticket and our engineering team will get back to you.</p>
+            
+            <div class="contact-methods">
+              
+              <div class="contact-method-item">
+                <div class="contact-method-icon">✉</div>
+                <div class="contact-method-details">
+                  <h4>Email Correspondence</h4>
+                  <p>enterprise@wisebuyai.com</p>
+                </div>
+              </div>
+              
+              <div class="contact-method-item">
+                <div class="contact-method-icon">📍</div>
+                <div class="contact-method-details">
+                  <h4>Global Headquarters</h4>
+                  <p>100 Pine Street, San Francisco, CA 94111</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+          <!-- Glassmorphic form card -->
+          <div class="contact-form-card glass-card">
+            <h3>Send Message</h3>
+            
+            <form id="compare-contact-form">
+              <div class="form-grid">
+                
+                <div class="form-field">
+                  <label for="contact-name">Full Name</label>
+                  <input type="text" id="contact-name" placeholder="John Doe" required>
+                </div>
+                
+                <div class="form-field">
+                  <label for="contact-email">Email Address</label>
+                  <input type="email" id="contact-email" placeholder="john@company.com" required>
+                </div>
+                
+                <div class="form-field">
+                  <label for="contact-message">Your Message</label>
+                  <textarea id="contact-message" rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+                
+                <div class="form-submit-row">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+                
+              </div>
+            </form>
+            
+            <!-- Success State -->
+            <div class="form-success-state" id="contact-form-success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <h3>Message Dispatched!</h3>
+              <p style="color: var(--text-secondary); font-size: 14px; margin-top:8px;">Thank you for contacting WiseBuy AI. Our team will review your inquiry and follow up within 24 business hours.</p>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- STICKY COMPARISON CART DOCK OVERLAY -->
+  <div class="sticky-compare-cart" id="compare-cart-sticky">
+    <div class="cart-items-row">
+      <div class="cart-items-count-pill" id="cart-count">0</div>
+      <div class="cart-labels" id="cart-product-names">
+        Comparing: <span>MacBook Pro vs XPS</span>
+      </div>
+    </div>
+    <div class="cart-actions">
+      <button class="btn btn-secondary btn-sm" id="btn-clear-sticky">Clear</button>
+      <button class="btn btn-primary btn-sm" id="btn-compare-sticky">Compare Matrix</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 style="margin-bottom: 8px;">WiseBuy AI</h3>
+          <p>The premium, AI-powered hardware synthesis index. Stop guessing specs, start comparing with verified intelligence.</p>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#home">Home Dashboard</a></li>
+            <li><a href="#compare">Comparison Matrix</a></li>
+            <li><a href="#ai">AI Assistant</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Engine</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+            <li><a href="#">Security Audit</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="#">Scrapers API</a></li>
+            <li><a href="#">Dataset Exports</a></li>
+            <li><a href="#">Status Monitor</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>© 2026 WiseBuy AI Corp. All rights reserved. Servicing global hardware queries.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
